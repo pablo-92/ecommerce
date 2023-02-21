@@ -6,6 +6,8 @@ const Variables = css`
     --color-secundario: #ffdfc0;
     --color-promo: #aef6f7;
     --color-promo2: #e690bd;
+    --color-gris: #ebebeb;
+    --color-gris-secundario: #a8a8a8;
     --gradiente-principal: linear-gradient(
       to left,
       var(--color-principal),

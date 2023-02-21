@@ -19,5 +19,8 @@ const EstilosGlobales = createGlobalStyle`
         text-decoration: none;
         color: inherit;
     }
+    ul{
+        list-style-type: none;
+    }
 `;
 export default EstilosGlobales;
