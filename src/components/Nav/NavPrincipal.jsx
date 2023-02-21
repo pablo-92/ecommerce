@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { FiSearch, FiUser, FiShoppingBag, FiHeart } from "react-icons/fi";
+import NavMovil from "./NavMovil/NavMovil";
 
 const Nav = styled.nav`
   width: 100%;
@@ -108,9 +109,15 @@ const BotonGenero = styled.button`
 `;
 
 const NavPrincipal = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <Nav>
-      <BtnNavMovil>
+      <BtnNavMovil onClick={handleClick}>
         <span></span>
         <span></span>
         <span></span>
@@ -142,6 +149,7 @@ const NavPrincipal = () => {
       <IconoNav>
         <FiShoppingBag />
       </IconoNav>
+      <NavMovil isOpen={isOpen} setIsOpen={setIsOpen} />
     </Nav>
   );
 };
