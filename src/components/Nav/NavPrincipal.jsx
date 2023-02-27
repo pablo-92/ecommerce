@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { FiSearch, FiUser, FiShoppingBag, FiHeart } from "react-icons/fi";
 import NavMovil from "./NavMovil/NavMovil";
+import NavDesktop from "./NavDesktop/NavDesktop";
 
 const Nav = styled.nav`
   width: 100%;
@@ -116,41 +117,44 @@ const NavPrincipal = () => {
   };
 
   return (
-    <Nav>
-      <BtnNavMovil onClick={handleClick}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </BtnNavMovil>
-      <LogoNav>asos</LogoNav>
-      <BotonGenero>
-        <a href="/">mujer</a>
-      </BotonGenero>
-      <BotonGenero>
-        <a href="/">hombre</a>
-      </BotonGenero>
-      <BusquedaNavPrincipal>
-        <div>
-          <input type="search" name="" id="" />
-          <button>
-            <FiSearch />
-          </button>
-        </div>
-      </BusquedaNavPrincipal>
-      <IconoNav className="icono-busqueda">
-        <FiSearch />
-      </IconoNav>
-      <IconoNav>
-        <FiUser />
-      </IconoNav>
-      <IconoNav>
-        <FiHeart />
-      </IconoNav>
-      <IconoNav>
-        <FiShoppingBag />
-      </IconoNav>
-      <NavMovil isOpen={isOpen} setIsOpen={setIsOpen} />
-    </Nav>
+    <>
+      <Nav>
+        <BtnNavMovil onClick={handleClick}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </BtnNavMovil>
+        <LogoNav>asos</LogoNav>
+        <BotonGenero>
+          <a href="/">mujer</a>
+        </BotonGenero>
+        <BotonGenero>
+          <a href="/">hombre</a>
+        </BotonGenero>
+        <BusquedaNavPrincipal>
+          <div>
+            <input type="search" name="" id="" />
+            <button>
+              <FiSearch />
+            </button>
+          </div>
+        </BusquedaNavPrincipal>
+        <IconoNav className="icono-busqueda">
+          <FiSearch />
+        </IconoNav>
+        <IconoNav>
+          <FiUser />
+        </IconoNav>
+        <IconoNav>
+          <FiHeart />
+        </IconoNav>
+        <IconoNav>
+          <FiShoppingBag />
+        </IconoNav>
+        <NavMovil isOpen={isOpen} setIsOpen={setIsOpen} />
+      </Nav>
+      <NavDesktop />
+    </>
   );
 };
 
